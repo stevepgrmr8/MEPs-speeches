@@ -29,6 +29,7 @@ for j in range (len(listnum)):
     start=docraw.find('<!-- START : MAIN CONTENT -->')
     end=docraw.find('<!-- END : MAIN CONTENT -->')
     doc=docraw[start:end]
+    doc=doc.replace('<br/>', '<br/> ')
     docbs=bs4.BeautifulSoup(doc)
     #name of the MEP, opening file with the MEP name:
     try:
